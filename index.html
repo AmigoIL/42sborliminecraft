@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачивание сборок по Minecraft</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Сборки</h2>
+            <ul id="modList">
+                <li onclick="showModInfo('mod1')">MagicCreate</li>
+                <li onclick="showModInfo('mod2')">Vanilla+</li>
+                <li onclick="showModInfo('mod3')">Vanilla++</li>
+                <li onclick="showModInfo('mod4')">СП5</li>
+                <li onclick="showModInfo('server')" style="border-top: 1px solid #444; margin-top: 10px;">Лучший сервер Minecraft - S52</li>
+            </ul>
+        </div>
+        <div class="content default-bg" id="content">
+            <!-- Рамка с описанием сайта -->
+            <div class="info-box site-description-box" id="siteDescriptionBox">
+                <h2>Добро пожаловать на сайт сборок Minecraft</h2>
+                <p>Здесь вы можете скачать различные сборки для Minecraft, чтобы разнообразить игровой процесс. Выберите одну из сборок в меню слева для получения подробной информации и ссылки на скачивание.</p>
+                <p>Сайт сделан Илья Алексеевичем при поддержке самого себя :)</p>
+                <p>Если есть вопросы или хотите помочь и поддержать, то пишите в <a class="telegram-link" href="https://t.me/yaneilyaa" target="_blank">телеграмме</a>.</p>
+            </div>
+            <!-- Рамка для информации о моде -->
+            <div class="info-box hidden" id="infoBox">
+                <h1 id="modTitle" class="hidden">Выберите сборку</h1>
+                <p id="modDescription" class="hidden">Описание сборки</p>
+                <p id="modDetails" class="hidden">Эта сборка включает в себя ...</p>
+                <a id="downloadLink" href="#" download class="download-button hidden">Скачать</a>
+            </div>
+            <!-- Рамка для информации о сервере -->
+            <div class="info-box hidden" id="serverInfoBox">
+                <img id="serverImage" src="images/friends.png" alt="Server Image" style="width: 100%; max-width: 500px; margin: 0 auto;">
+                <h1 id="serverTitle">S52</h1>
+                <p id="serverDescription">Лучший ванильный сервер. Основывай города, выживай торгуй, общайся с игроками. </p>
+                <p>Этой мой сервер и если есть какие-то вопросы пишите в <a class="telegram-link" href="https://t.me/yaneilyaa" target="_blank">телеграмме</a> </p>
+                <p id="serverIP">IP: <span id="serverIPText">s52town.aternos.me:41096</span> <button onclick="copyIP()" class="download-button">Скопировать IP</button></p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

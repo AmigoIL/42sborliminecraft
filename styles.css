@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 15%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    position: relative;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+}
+
+.sidebar ul li.active {
+    background-color: #555;
+    border-left: 5px solid #4CAF50;
+    font-size: 1.1em;
+    transition: border-left 0.2s ease;
+}
+
+.sidebar ul li.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 5px;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: left 0.2s ease;
+}
+
+.sidebar ul li.active::before {
+    left: 0;
+}
+
+.content {
+    width: 85%;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: white;
+    color: #4CAF50;
+    text-decoration: none;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #4CAF50;
+    color: white; /* Белый цвет текста при наведении */
+}
+
+.hidden {
+    display: none;
+}
+
+.default-bg {
+    background-image: url('images/default.jpg'); /* Путь к начальному фону */
+}
+
+/* Рамка для информации */
+.info-box {
+    background-color: rgba(33, 33, 33, 0.9); /* Темный фон с 70% прозрачностью */
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid rgba(76, 175, 80, 1); /* Зеленая рамка с 70% прозрачностью */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для рамки */
+    position: relative; /* Для позиционирования внутри контейнера */
+    width: 100%; /* Ширина рамки */
+    max-width: 1100px; /* Максимальная ширина рамки */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+    margin-top: 0px; /* Добавление отступа сверху */
+    color: #ffffff; /* Цвет текста внутри рамки */
+}
+
+/* Стилизация ссылки внутри info-box */
+.info-box a.telegram-link {
+    color: #4CAF50; /* Зеленый цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    transition: color 0.3s ease; /* Плавный переход при изменении цвета */
+}
+
+.info-box a.telegram-link:hover {
+    color: #388E3C; /* Более темный зеленый цвет при наведении */
+}
+
+.margin-top-large {
+    margin-top: 1%; /* Пример большого отступа сверху */
+}
+#serverImage {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 15px; /* Применяем скругление краев */
+    overflow: hidden; /* Обрезаем лишний контент, чтобы скругление краев было видно */
+}
