@@ -136,4 +136,11 @@ function showServerInfo() {
     // Отключаем фоновое изображение, если оно было установлено ранее
     content.classList.remove('default-bg');
 }
-
+function copyIP() {
+    let serverIPText = document.getElementById('serverIPText').innerText;
+    navigator.clipboard.writeText(serverIPText).then(function() {
+       ;
+    }, function(err) {
+        console.error('Ошибка копирования IP адреса: ', err);
+    });
+}
